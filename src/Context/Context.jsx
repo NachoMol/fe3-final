@@ -11,29 +11,28 @@ const OdontoStates = createContext()
 //     //accion para cambiar de tema
 // }
 
-// const localFavs = JSON.parse(localStorage.getItem('favs'))
-// const initialFavState = localFavs ? localFavs : []
+const localFavs = JSON.parse(localStorage.getItem('favs'))
+const initialFavState = localFavs ? localFavs : []
 
 const Context = ({children}) => {
     const [odontologos, setOdontologo] = useState([])
-    //const [favs, setFavs] = useState(initialFavState) --> Favs
+    const [favs, setFavs] = useState(initialFavState)
     //const [theme, setTheme] = useState(true) --> Modo oscuro
     
     const url = 'https://jsonplaceholder.typicode.com/users'
 
     useEffect(() => {
         axios(url)
-        .then(res => setOdontologo(res.data.results))
+        .then(res => setOdontologo(res.data))
     }, [])
 
-    // useEffect(() => {
-    //     localStorage.setItem('favs', JSON.stringify(favs))
-    // },[favs])
+    useEffect(() => {
+        localStorage.setItem('favs', JSON.stringify(favs))
+    },[favs])
 
 
-    // agregar favs, setFavs al value
     return (
-        <OdontoStates.Provider value={{odontologos}}>
+        <OdontoStates.Provider value={{odontologos,favs,setFavs}}>
             {children}
         </OdontoStates.Provider>
     )
