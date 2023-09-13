@@ -17,7 +17,7 @@ const emailRegex = (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if(cliente.nombre.length > 5 && emailRegex) {
+    if(cliente.nombre.length > 5 && emailRegex.test(cliente.email)) {
         setEnviado(true)
         setError(false)
     } else {
