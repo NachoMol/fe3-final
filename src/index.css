@@ -94,6 +94,15 @@ form{
   margin: 0 auto;
 }
 
+.card-image{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 200px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
 table {
  border-collapse: collapse;
     border-spacing: 0;

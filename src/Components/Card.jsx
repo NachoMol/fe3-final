@@ -18,7 +18,7 @@ const Card = ({ odontologo }) => {
     <div className="card">
         <Link to={'/detail/' + odontologo.id}>  
             <h3>Name: {odontologo.name}</h3>
-            <img src="/images/doctor.jpg" alt="" />
+            <img src="/images/doctor.jpg" alt="" className="card-image"/>
             <h4>Username: {odontologo.username}</h4>
         </Link>
 
