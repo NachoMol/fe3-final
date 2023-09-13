@@ -15,6 +15,7 @@ const localFavs = JSON.parse(localStorage.getItem('favs'))
 const initialFavState = localFavs ? localFavs : []
 
 const Context = ({children}) => {
+
     const [odontologos, setOdontologo] = useState([])
     const [favs, setFavs] = useState(initialFavState)
     //const [theme, setTheme] = useState(true) --> Modo oscuro
