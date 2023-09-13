@@ -5,12 +5,18 @@ import { useOdontoStates } from '../Context/Context'
 
 
 const Card = ({ odontologo }) => {
+  const {state, dispatch} = useOdontoStates()
+  const findOdontologo = state.favs.find(fav => fav.id == odontologo.id)
 
-  const {favs, setFavs} = useOdontoStates()
-
-  // const addFav = ()=>{
+  const addFav = ()=>{
+    if(findOdontologo){
+      dispatch({type: 'DELETE_FAV', payload: findOdontologo})
+    } else {
+      dispatch({type: 'ADD_FAV', payload: odontologo})
+    }
+    // 
     
-  // }
+  }
 
 
 
@@ -23,7 +29,8 @@ const Card = ({ odontologo }) => {
         </Link>
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={() => setFavs((prevFavs) => [...prevFavs, odontologo])} className="favButton"> ⭐</button>
+        <button onClick={addFav} className="favButton"> {findOdontologo ? '🌟' : '⭐'}</button>
+        {/* () => setFavs((prevFavs) => [...prevFavs, odontologo]) */}
     </div>
   );
 };

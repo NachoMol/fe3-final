@@ -6,13 +6,13 @@ import { useOdontoStates } from '../Context/Context'
 
 const Home = () => {
 
-  const {odontologos} = useOdontoStates()
+  const {state} = useOdontoStates()
 
   return (
     <main className="" >
       <h1>Home</h1>
       <div className='card-grid'>
-        {odontologos.map(odontologo => (<Card odontologo={odontologo} key={odontologo.id}/>))}
+        {state.odontologos.map(odontologo => (<Card odontologo={odontologo} key={odontologo.id}/>))}
       </div>
     </main>
   )

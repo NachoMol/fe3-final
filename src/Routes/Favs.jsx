@@ -6,7 +6,7 @@ import { useOdontoStates } from "../Context/Context";
 
 const Favs = () => {
 
-  const {favs} = useOdontoStates()
+  const {state} = useOdontoStates()
 
   
 
@@ -14,7 +14,7 @@ const Favs = () => {
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {favs.map(fav =>
+        {state.favs.map(fav =>
         <Card odontologo={fav} key={fav.id}/>)}
       </div>
     </>
