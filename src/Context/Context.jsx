@@ -5,7 +5,6 @@ const OdontoStates = createContext()
 
 // const reducer = (state, action) => { USERREDUCER
 //     //accion para obtener todos los personajes
-//     //accion para realizar la paginacion 
 //     //accion para agregar favoritos
 //     //accion para borrar favoritos
 //     //accion para cambiar de tema
