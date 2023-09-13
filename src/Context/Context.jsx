@@ -3,7 +3,7 @@ import {useContext, createContext, useState, useReducer, useEffect} from 'react'
 
 const OdontoStates = createContext()
 
-// const reducer = (state, action) => { USERREDUCER
+// const reducer = (state, action) => { USER-REDUCER
 //     //accion para obtener todos los personajes
 //     //accion para agregar favoritos
 //     //accion para borrar favoritos
