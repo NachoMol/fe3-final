@@ -25,9 +25,10 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
+  width: 100vw;
   justify-content: flex-start;
   padding: 1rem;
+  background-color: lightgray;
 }
 
 a{
@@ -50,6 +51,7 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  background-color: lightcoral;
 }
 
 footer > img{

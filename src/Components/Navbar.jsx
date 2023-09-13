@@ -7,7 +7,7 @@ import './styles/Navbar.css';
 const Navbar = () => {
 
   return (
-    <nav>
+    <nav className='nav'>
       <ul className="navbar-list">
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <li><Link to="/">Home</Link></li>
