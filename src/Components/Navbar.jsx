@@ -9,6 +9,7 @@ const Navbar = () => {
   return (
     <nav className='nav'>
       <ul className="navbar-list">
+      <img src="/DH.ico" alt="DH" />
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <li><Link to="/">Home</Link></li>
       <li><Link to="/contacto">Contacto</Link></li>
