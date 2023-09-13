@@ -5,6 +5,7 @@ import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
+import Detail from "./Routes/Detail";
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/contacto" element={<Contact />} />
           <Route path="/favs" element={<Favs />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
         <Footer/>
 
