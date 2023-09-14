@@ -15,7 +15,7 @@ const reducer = (state, action) => {
         case 'DELETE_FAV':
             return {...state, favs: state.favs.filter(fav => fav.id !== action.payload.id)}
         case 'SWITCH_THEME':
-            return  {...state, theme: !state.theme}
+            return  {...state, theme: state.theme === '' ? 'dark' : '' }; // Cambia el tema entre "light" y "dark"
         default:
             throw new Error()
     }

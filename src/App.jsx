@@ -6,11 +6,16 @@ import Favs from "./Routes/Favs";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Detail from "./Routes/Detail";
+import { useOdontoStates } from "./Context/Context";
 
 
 
 function App() {
+
+  const { state } = useOdontoStates(); 
+  const bodyClassName = `body ${state.theme}`
   return (
+    <html className= {bodyClassName}>
       <div className="App">
         <Navbar/>
         <Routes>
@@ -20,8 +25,8 @@ function App() {
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
         <Footer/>
-
       </div>
+    </html>  
   );
 }
 
