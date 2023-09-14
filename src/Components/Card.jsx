@@ -29,7 +29,7 @@ const Card = ({ odontologo }) => {
         </Link>
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton"> {findOdontologo ? '🌟' : '⭐'}</button>
+        <button onClick={addFav} className="favButton"> {findOdontologo ? <img className="icon" src="/images/fav.png" alt="fav"/> : <img className="icon" src="/images/unfav.png" alt="fav"/>}</button>
         {/* () => setFavs((prevFavs) => [...prevFavs, odontologo]) */}
     </div>
   );
