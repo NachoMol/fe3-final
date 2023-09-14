@@ -18,13 +18,13 @@ const Navbar = () => {
     
       <nav className='nav'>
       <ul className="navbar-list">
-      <img src="/DH.ico" alt="DH" />
+      <img src="/images/logoPersonalizado.jpg" alt="DH" />
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <li><Link to="/">Home</Link></li>
       <li><Link to="/contacto">Contacto</Link></li>
       <li><Link to="/favs">Favs</Link></li>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleTheme}>Change theme</button>
+      <button onClick={toggleTheme}>{state.theme ? <img className="icon" src="/images/sun.png" alt="fav"/> : <img className="icon" src="/images/moon.png" alt="fav"/>}</button>
       </ul>
       </nav>
     
