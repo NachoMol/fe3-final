@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  viewport-fit: inherit;
 }
 
 code {
@@ -25,8 +26,8 @@ h1{
 
 nav{
   display: flex;
-  width: 100vw;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-evenly;
   padding: 1rem;
   background-color: lightgray;
 }
@@ -98,7 +99,7 @@ form{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
+  width: 90%;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -119,6 +120,7 @@ table {
     width: 100%;
     display: table;
     border: 1px solid #ccc;
+    margin: 50px;
 
 }
 
@@ -138,4 +140,12 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.logoPersonalizado{
+  display: flex;
+  align-content: flex-start;
+  height: 75px;
+  width: 250px;
+  
 }

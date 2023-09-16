@@ -13,12 +13,11 @@ const Navbar = () => {
   const toggleTheme = () => {
     dispatch({ type: 'SWITCH_THEME' }); // Activa la acción SWITCH_THEME del contexto
 };
-  const bodyClassName = `body ${state.theme}`
   return (
     
       <nav className='nav'>
+        <img src="/images/logoPersonalizado.jpg" alt="DH" className='logoPersonalizado' />
       <ul className="navbar-list">
-      <img src="/images/logoPersonalizado.jpg" alt="DH" />
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <li><Link to="/">Home</Link></li>
       <li><Link to="/contacto">Contacto</Link></li>

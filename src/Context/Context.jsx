@@ -36,9 +36,6 @@ const initialState = {
 
 const Context = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
-    // const [odontologos, setOdontologo] = useState([])
-    // const [favs, setFavs] = useState(initialFavState)
-    //const [theme, setTheme] = useState(true) --> Modo oscuro
     
     const url = 'https://jsonplaceholder.typicode.com/users'
 
