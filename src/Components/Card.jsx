@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useOdontoStates } from '../Context/Context'
 
@@ -14,10 +14,9 @@ const Card = ({ odontologo }) => {
     } else {
       dispatch({type: 'ADD_FAV', payload: odontologo})
     }
-    // 
-    
-  }
+}
 
+const buttonText = findOdontologo ? 'Quitar de favoritos' : 'Añadir a favoritos';
 
 
   return (
@@ -29,8 +28,8 @@ const Card = ({ odontologo }) => {
         </Link>
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton"> {findOdontologo ? <img className="icon" src="/images/fav.png" alt="fav"/> : <img className="icon" src="/images/unfav.png" alt="fav"/>}</button>
-        {/* () => setFavs((prevFavs) => [...prevFavs, odontologo]) */}
+        <button onClick={addFav} className="favButton">  {findOdontologo ? <img className="icon" src="/images/fav.png" alt="fav"/> : <img className="icon" src="/images/unfav.png" alt="fav"/>} {buttonText}</button>
+
     </div>
   );
 };
